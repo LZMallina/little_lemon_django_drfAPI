@@ -7,7 +7,7 @@ from rest_framework.validators import UniqueTogetherValidator
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields =['id','title']
+        fields =['id','title','slug']
         
 class MenuItemSerializer(serializers.ModelSerializer):
     price_after_tax = serializers.SerializerMethodField(method_name='calculate_tax')
